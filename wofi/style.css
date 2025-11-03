@@ -1,0 +1,47 @@
+/* ~/.config/wofi/style.css */
+
+/* Define colors (optional, but good for themes) */
+* {
+    font-family: "Sans-serif", monospace;
+    font-size: 16px;
+    background-color: transparent;
+    color: #ffffff; /* Text color */
+}
+
+/* The main window */
+window {
+    background-color: rgba(30, 30, 46, 0.9); /* Dark background with transparency */
+    border: 2px solid #89b4fa; /* Accent border color */
+    border-radius: 10px;
+    padding: 15px;
+}
+
+/* Input box (where you type) */
+#input {
+    margin: 5px;
+    padding: 8px;
+    border-radius: 5px;
+    background-color: rgba(49, 50, 68, 0.9);
+}
+
+/* Inner box containing results */
+#outer-box {
+    padding: 0px;
+}
+
+#inner-box {
+    padding: 5px;
+}
+
+/* Entries (individual application lines) */
+#entry {
+    padding: 5px;
+    border-radius: 5px;
+}
+
+/* Selected entry */
+#entry:selected {
+    background-color: #89b4fa; /* Highlight color */
+    color: #1e1e2e; /* Text color for selected entry */
+}
+
