@@ -30,7 +30,6 @@ window#waybar {
 
 #workspaces button.active {
     background-color: #ffffff; /* Active dot color (White) */
-    min-width: 25px; /* Optional: stretch the active dot slightly */
     border-radius: 50%;
 }
 
@@ -38,8 +37,21 @@ window#waybar {
     background-color: rgba(255, 255, 255, 0.6); /* Occupied but not active */
 }
 
-#workspaces button.special {
-    background-color: #f5c2e7; /* Pink color for the Magic Workspace */
+#workspaces button.special:not(.active) {
+    background-color: rgba(255, 255, 255, 0.6); 
+    min-width: 25px;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 5px rgba(245, 194, 231, 0.5);
+    border-radius: 30%;
+}
+
+/* 2. (Optional) If you want it to stay Pink even when FOCUSED */
+/* If you omit this, it will turn White (your standard active color) */
+#workspaces button.special.active {
+    background-color: #ffffff; 
+    box-shadow: 0 0 10px rgba(245, 194, 231, 0.8);
+    min-width: 25px; /* Ensure it stretches like the others */
+    border-radius: 30%;
 }
 
 /* --- Clock --- */
@@ -75,3 +87,4 @@ window#waybar {
     color: #f38ba8; /* Red tint when muted */
     background-color: rgba(0, 0, 0, 0.3);
 }
+

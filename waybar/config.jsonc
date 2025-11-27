@@ -28,8 +28,8 @@
     }
   },
   "clock": {
-    "format": "{:%H:%M}",
-    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{:%Y-%m-%d}</small></tt>"
+    "format": "{0:%H:%M}",
+    "tooltip-format": "<big>{0:%Y %B}</big>\n<tt><small>{0:%Y-%m-%d}</small></tt>"
   },
   "mpris": {
     "format": "{player_icon}  {title} - {artist}",
