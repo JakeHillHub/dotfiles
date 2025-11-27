@@ -1,0 +1,7 @@
+google-chrome
+gpu-screen-recorder
+hpaper
+spotify
+visual-studio-code-bin
+yay
+yay-debug

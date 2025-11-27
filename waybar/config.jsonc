@@ -1,0 +1,62 @@
+{
+  "layer": "top",
+  "position": "top",
+  "mod": "dock",
+  "exclusive": true,
+  "passthrough": false,
+  "gtk-layer-shell": true,
+  "height": 30,
+  "modules-left": [
+    "hyprland/workspaces"
+  ],
+  "modules-center": [
+    "clock"
+  ],
+  "modules-right": [
+    "mpris",
+    "pulseaudio"
+  ], // Added pulseaudio here
+  "hyprland/workspaces": {
+    "disable-scroll": true,
+    "all-outputs": true,
+    "on-click": "activate",
+    "show-special": true, // Displays the 'magic' workspace
+    "persistent-workspaces": {
+      "1": [],
+      "2": [],
+      "3": []
+    }
+  },
+  "clock": {
+    "format": "{:%H:%M}",
+    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{:%Y-%m-%d}</small></tt>"
+  },
+  "mpris": {
+    "format": "{player_icon}  {title} - {artist}",
+    "format-paused": "{status_icon}  {title}",
+    "player-icons": {
+      "default": "",
+      "spotify": ""
+    },
+    "status-icons": {
+      "paused": ""
+    },
+    "ignored-players": [
+      "firefox",
+      "chromium"
+    ] // Ignore browser audio
+  },
+  "pulseaudio": {
+    "format": "{icon} {volume}%",
+    "format-muted": "  Muted",
+    "format-icons": {
+      "default": [
+        "",
+        "",
+        ""
+      ]
+    },
+    "on-click": "pavucontrol", // Opens volume control on click
+    "scroll-step": 5
+  }
+}
