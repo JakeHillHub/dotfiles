@@ -2,6 +2,7 @@ google-chrome
 gpu-screen-recorder
 hpaper
 spotify
+sqlitestudio
 visual-studio-code-bin
 yay
 yay-debug

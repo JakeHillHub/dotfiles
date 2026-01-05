@@ -4,11 +4,13 @@ bluez
 dolphin
 dunst
 fastfetch
+fd
 firefox
 fzf
 git
 grim
 gum
+htop
 hyprland
 hyprpaper
 imagemagick
@@ -17,6 +19,7 @@ intel-ucode
 kitty
 linux
 linux-firmware
+luarocks
 man-db
 man-pages
 neovim
@@ -24,7 +27,8 @@ networkmanager
 nodejs
 noto-fonts-emoji
 npm
-nvidia
+ntp
+nvidia-open
 openbsd-netcat
 openssh
 otf-commit-mono-nerd
@@ -42,6 +46,7 @@ slurp
 steam
 swappy
 tmux
+tree
 ttf-hack-nerd
 ttf-jetbrains-mono-nerd
 unzip
