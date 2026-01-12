@@ -53,6 +53,7 @@ unzip
 vi
 vim
 waybar
+websocat
 wl-clipboard
 wofi
 xdg-desktop-portal-hyprland
