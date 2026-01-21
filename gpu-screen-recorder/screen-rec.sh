@@ -10,10 +10,21 @@ if pgrep -f "gpu-screen-recorder -w" >/dev/null; then
   pkill -SIGINT -f "gpu-screen-recorder -w"
   notify-send "Recording Stopped" "Video saved to ${OUTPUT_FILE}"
 else
-  # Execute slurp to get the selection (e.g., 283,215 69x211)
-  # Pipe to sed to reformat to WxH+X+Y (e.g., 69x211+283+215)
-  # Use a temporary variable to store the result
-  gpu_region_string=$(slurp | sed -E 's/([0-9]+),([0-9]+) ([0-9]+x[0-9]+)/\3+\1+\2/')
+  # Get the monitor scale factor from hyprctl
+  scale=$(hyprctl monitors -j | jq -r '.[0].scale')
+
+  # Execute slurp to get the selection in logical coordinates (e.g., 283,215 69x211)
+  slurp_output=$(slurp)
+
+  # Parse and scale the coordinates to physical pixels
+  # slurp format: X,Y WxH -> need to multiply all values by scale
+  gpu_region_string=$(echo "$slurp_output" | awk -v s="$scale" -F'[, x]' '{
+    x = int($1 * s)
+    y = int($2 * s)
+    w = int($3 * s)
+    h = int($4 * s)
+    printf "%dx%d+%d+%d", w, h, x, y
+  }')
 
   # Check if a region was actually selected (slurp output is often empty if cancelled)
   if [ -z "$gpu_region_string" ]; then
