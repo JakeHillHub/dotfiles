@@ -3,6 +3,7 @@ base-devel
 bluez
 dolphin
 dunst
+ex-vi-compat
 fastfetch
 fd
 firefox
@@ -38,6 +39,7 @@ pavucontrol
 pipewire-alsa
 pipewire-pulse
 protobuf
+python-pip
 python-virtualenv
 qt6-virtualkeyboard
 sbctl
@@ -50,8 +52,9 @@ tree
 ttf-hack-nerd
 ttf-jetbrains-mono-nerd
 unzip
-vi
+uv
 vim
+vlc
 waybar
 websocat
 wl-clipboard

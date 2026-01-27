@@ -2,7 +2,6 @@ alias vim=nvim
 alias open=dolphin
 alias screenrec=~/dotfiles/gpu-screen-recorder/screen-rec.sh
 
-. ~/.venv/bin/activate
 export PATH=$PATH:~/go/bin/
 export PATH="$HOME/.local/bin:$PATH"  # Claude code
 
