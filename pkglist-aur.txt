@@ -1,7 +1,7 @@
 brave-bin
 google-chrome
-gpu-screen-recorder
 hpaper
+moderncsv-bin
 spotify
 sqlitestudio
 visual-studio-code-bin
